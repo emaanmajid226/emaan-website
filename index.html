@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emaan Portfolio</title>
   <style>
     body {
@@ -10,7 +11,6 @@
       background: linear-gradient(to right, #f7f7f7, #a0e0be);
     }
 
-    /* Loader */
     #loader {
       position: fixed;
       width: 100%;
@@ -50,7 +50,8 @@
     }
 
     .logo {
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
       margin: 20px auto 10px;
       display: block;
     }
@@ -106,46 +107,68 @@
     }
 
     .transformation img {
-      width: 300px;
+      width: 90%;
+      max-width: 300px;
       margin: 10px;
       border-radius: 8px;
       box-shadow: 0 0 10px #aaa;
     }
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.contact-form button {
-  background-color: darkgreen;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
 
-.contact-form button:hover {
-  background-color: #056f40;
-}
+    .contact-form button {
+      background-color: darkgreen;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
+    .contact-form button:hover {
+      background-color: #056f40;
+    }
+
+    @media (max-width: 768px) {
+      #main-content {
+        padding: 15px;
+      }
+
+      h1, h2, p, li {
+        font-size: 16px;
+      }
+
+      .offer-section {
+        padding: 20px;
+        margin: 15px auto;
+        width: 95%;
+      }
+
+      .contact-button {
+        font-size: 16px;
+        padding: 10px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -161,13 +184,14 @@
   <img src="eman_logo_transparent.png" alt="Emaan Logo" class="logo">
   <h1>Welcome to My Portfolio</h1>
   <p>I’m Emaan Majid, and I help people improve their logos and websites — absolutely free!</p>
-<h2>My Skills</h2>
-<ul>
-  <li>🎨 Logo Design (Adobe Illustrator, Canva) – ⭐⭐⭐⭐⭐</li>
-  <li>💻 HTML & CSS – ⭐⭐⭐⭐☆</li>
-  <li>📱 Responsive Design – ⭐⭐⭐⭐☆</li>
-  <li>🧠 Creativity & Branding – ⭐⭐⭐⭐⭐</li>
-</ul>
+
+  <h2>My Skills</h2>
+  <ul>
+    <li>🎨 Logo Design (Adobe Illustrator, Canva) – ⭐⭐⭐⭐⭐</li>
+    <li>💻 HTML & CSS – ⭐⭐⭐⭐☆</li>
+    <li>📱 Responsive Design – ⭐⭐⭐⭐☆</li>
+    <li>🧠 Creativity & Branding – ⭐⭐⭐⭐⭐</li>
+  </ul>
 
   <div class="offer-section">
     <h2>✨ What I Offer</h2>
@@ -179,36 +203,32 @@
     <p>Have a dull or old website? I’ll transform it into something fresh & beautiful!</p>
   </div>
 
-<div class="offer-section">
-  <h2>📧 Send Me a Message</h2>
-  <p>📩 I usually reply within 24 hours. Feel free to reach out using the form below!</p>
-  
-  <form action="https://formsubmit.co/manomajid999@gmail.com" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="offer-section">
+    <h2>📧 Send Me a Message</h2>
+    <p>📩 I usually reply within 24 hours. Feel free to reach out using the form below!</p>
+    <form action="https://formsubmit.co/manomajid999@gmail.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; font-size:14px; margin-top:10px;">
+      Or email me directly at <strong>manomajid999@gmail.com</strong>
+    </p>
+  </div>
 
-  <p style="text-align:center; font-size:14px; margin-top:10px;">
-    Or email me directly at <strong>manomajid999@gmail.com</strong>
-  </p>
-</div>
-
-<!-- Feedback Section -->
-<div class="offer-section">
-  <h2>🌟 Feedback from Happy Clients</h2>
-  <ul>
-    <li>"Emaan completely revived my old logo—now it looks sleek, professional, and modern. Highly recommend!" – Sara Khan</li>
-    <li>"Her website redesign was beyond expectations! She added charm and usability that I didn’t even know I needed." – Ali Raza</li>
-  </ul>
-</div>
+  <div class="offer-section">
+    <h2>🌟 Feedback from Happy Clients</h2>
+    <ul>
+      <li>"Emaan completely revived my old logo—now it looks sleek, professional, and modern. Highly recommend!" – Sara Khan</li>
+      <li>"Her website redesign was beyond expectations! She added charm and usability that I didn’t even know I needed." – Ali Raza</li>
+    </ul>
+  </div>
 
   <a href="https://wa.me/923215811901" class="contact-button">💬 Contact Me on WhatsApp</a>
 </div>
 
 <script>
-  // Loader hide after 2s
   window.addEventListener("load", function() {
     const loader = document.getElementById("loader");
     const content = document.getElementById("main-content");
